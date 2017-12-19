@@ -1,0 +1,12 @@
+#! /usr/bin/env groovy
+pipeline{
+  agent any
+  parameters{
+  string (name:'Greeting',defaultvalue:'Hello',description:'Hello world'
+   }
+   stages{
+   stage{
+   echo "${params.Greeting}world!"
+    }
+    }
+    }
