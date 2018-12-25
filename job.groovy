@@ -4,9 +4,10 @@ freeStyleJob ('JenkinsTest') {
        github('Anjiammu/Anji', 'master')
          triggers {
              githubPush()
+         }
+       
             publishers {
                 archieveArtifacts('build/**/*.html')
             }
-        }
     }
 }
