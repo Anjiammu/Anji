@@ -5,5 +5,15 @@ freeStyleJob ('JenkinsTest') {
          triggers {
              githubPush()
          }
+        steps {
+        dockerBuildAndPublish {
+            repositoryName('anjia324/centosJenkinsImage')
+            tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=7}')
+            registryCredentials('docker-hub')
+            forcePull(false)
+            createFingerprints(false)
+            skipDecorate()
+        }
+    }
     }
 }
