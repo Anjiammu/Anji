@@ -5,9 +5,5 @@ freeStyleJob ('JenkinsTest') {
          triggers {
              githubPush()
          }
-       
-            publishers {
-                archieveArtifacts('build/**/*.html')
-            }
     }
 }
