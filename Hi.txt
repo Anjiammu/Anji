@@ -1,5 +1,5 @@
 Hey this is to test
-
+This is also used to check the policies for the Github policies.
 
 
 Hey Hi Hi this is the second file working on Git
